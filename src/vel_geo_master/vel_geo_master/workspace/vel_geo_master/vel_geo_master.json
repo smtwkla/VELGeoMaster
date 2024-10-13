@@ -1,7 +1,7 @@
 {
  "app": "frappe",
  "charts": [],
- "content": "[{\"id\":\"hRI7pMFAnB\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">VEL Geo Master</span>\",\"col\":12}},{\"id\":\"e_Ey0DPBbf\",\"type\":\"card\",\"data\":{\"card_name\":\"Utility Connections\",\"col\":4}},{\"id\":\"iyDnjC5XsU\",\"type\":\"card\",\"data\":{\"card_name\":\"Land\",\"col\":4}},{\"id\":\"0rgKAVSdHv\",\"type\":\"card\",\"data\":{\"card_name\":\"Infrastructure\",\"col\":4}},{\"id\":\"Flno6xUty7\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"2uxOrNrsJ_\",\"type\":\"card\",\"data\":{\"card_name\":\"Masters\",\"col\":4}}]",
+ "content": "[{\"id\":\"hRI7pMFAnB\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">VEL Geo Master</span>\",\"col\":12}},{\"id\":\"e_Ey0DPBbf\",\"type\":\"card\",\"data\":{\"card_name\":\"Utility Connections\",\"col\":4}},{\"id\":\"iyDnjC5XsU\",\"type\":\"card\",\"data\":{\"card_name\":\"Land\",\"col\":4}},{\"id\":\"0rgKAVSdHv\",\"type\":\"card\",\"data\":{\"card_name\":\"Infrastructure\",\"col\":4}},{\"id\":\"Flno6xUty7\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"2uxOrNrsJ_\",\"type\":\"card\",\"data\":{\"card_name\":\"Revenue Masters\",\"col\":4}},{\"id\":\"JrYeep35Cl\",\"type\":\"card\",\"data\":{\"card_name\":\"Masters\",\"col\":4}}]",
  "creation": "2024-10-14 00:04:25.467668",
  "custom_blocks": [],
  "docstatus": 0,
@@ -57,8 +57,8 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Land",
-   "link_count": 3,
+   "label": "Infrastructure",
+   "link_count": 2,
    "link_type": "DocType",
    "onboard": 0,
    "type": "Card Break"
@@ -66,9 +66,9 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Survey Number",
+   "label": "Building",
    "link_count": 0,
-   "link_to": "Survey Number",
+   "link_to": "Building",
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
@@ -76,9 +76,9 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Land Patta",
+   "label": "Water Well",
    "link_count": 0,
-   "link_to": "Land Patta",
+   "link_to": "Water Well",
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
@@ -86,17 +86,7 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Campus",
-   "link_count": 0,
-   "link_to": "Campus",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Masters",
+   "label": "Revenue Masters",
    "link_count": 3,
    "link_type": "DocType",
    "onboard": 0,
@@ -135,8 +125,8 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Infrastructure",
-   "link_count": 2,
+   "label": "Masters",
+   "link_count": 1,
    "link_type": "DocType",
    "onboard": 0,
    "type": "Card Break"
@@ -144,9 +134,9 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Building",
+   "label": "Property Owner",
    "link_count": 0,
-   "link_to": "Building",
+   "link_to": "Property Owner",
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
@@ -154,15 +144,54 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Water Well",
+   "label": "Land",
+   "link_count": 4,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Survey Number",
    "link_count": 0,
-   "link_to": "Water Well",
+   "link_to": "Survey Number",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Land Patta",
+   "link_count": 0,
+   "link_to": "Land Patta",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Campus",
+   "link_count": 0,
+   "link_to": "Campus",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Property Document",
+   "link_count": 0,
+   "link_to": "Property Document",
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
   }
  ],
- "modified": "2024-10-14 01:04:08.309753",
+ "modified": "2024-10-14 04:11:13.338147",
  "modified_by": "Administrator",
  "module": "VEL Geo Master",
  "name": "VEL Geo Master",
