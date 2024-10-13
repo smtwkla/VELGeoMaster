@@ -107,14 +107,14 @@
   },
   {
    "fieldname": "campus",
-   "fieldtype": "Data",
+   "fieldtype": "Link",
    "label": "Campus",
-   "read_only": 1
+   "options": "Campus"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-10-14 00:41:20.054963",
+ "modified": "2024-10-14 01:21:28.688709",
  "modified_by": "Administrator",
  "module": "VEL Geo Master",
  "name": "Building",

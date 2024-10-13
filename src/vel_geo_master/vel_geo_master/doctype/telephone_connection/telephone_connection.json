@@ -108,12 +108,6 @@
    "label": "Remarks"
   },
   {
-   "fieldname": "survey_number",
-   "fieldtype": "Link",
-   "label": "Survey Number",
-   "options": "Survey Number"
-  },
-  {
    "depends_on": "eval:doc.connection_type!=\"Mobile\"",
    "fieldname": "door_number",
    "fieldtype": "Data",
@@ -166,8 +160,7 @@
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Campus",
-   "options": "Campus",
-   "read_only": 1
+   "options": "Campus"
   },
   {
    "fieldname": "owner_gstin",
@@ -199,11 +192,17 @@
    "fieldtype": "Link",
    "label": "Connection Owner",
    "options": "Property Owner"
+  },
+  {
+   "fieldname": "survey_number",
+   "fieldtype": "Link",
+   "label": "Survey Number",
+   "options": "Survey Number"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-10-13 20:27:44.744893",
+ "modified": "2024-10-14 01:32:01.685554",
  "modified_by": "Administrator",
  "module": "VEL Geo Master",
  "name": "Telephone Connection",

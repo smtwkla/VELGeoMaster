@@ -7,7 +7,7 @@ from frappe.model.document import Document
 
 class SurveyNumber(Document):
 	def set_title(self):
-		self.title = f'{self.survey_no} [{self.village}]'
+		self.title = f'{self.survey_number} [{self.village}]'
 	def set_total_extent(self):
 		hectare = int(self.total_extent_sqm / 10000)
 		are = (self.total_extent_sqm - hectare * 10000) /100

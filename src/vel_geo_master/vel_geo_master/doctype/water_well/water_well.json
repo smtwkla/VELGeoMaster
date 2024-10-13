@@ -75,10 +75,10 @@
   },
   {
    "fieldname": "campus",
-   "fieldtype": "Data",
+   "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Campus",
-   "read_only": 1
+   "options": "Campus"
   },
   {
    "fieldname": "column_break_guye",
@@ -107,7 +107,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-10-13 20:12:36.491877",
+ "modified": "2024-10-14 01:21:54.392401",
  "modified_by": "Administrator",
  "module": "VEL Geo Master",
  "name": "Water Well",

@@ -44,6 +44,11 @@ def stop(v):
     click.echo("stop")
     os.system(f"docker compose down {'-v' if v else ''}")
 
+@click.command()
+def bash():
+    click.echo("bash")
+    os.system("docker compose exec bench bash")
+
 #REM docker run --rm -it --name customer_erp_dev -p 8000:8000 customer_erp_dev
 
 cli.add_command(build)
@@ -51,5 +56,6 @@ cli.add_command(configurator)
 cli.add_command(create_site)
 cli.add_command(run)
 cli.add_command(stop)
+cli.add_command(bash)
 if __name__ == '__main__':
     cli()

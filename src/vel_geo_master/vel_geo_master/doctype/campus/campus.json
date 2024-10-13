@@ -1,12 +1,13 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:CAMPUS-{###}",
+ "autoname": "field:campus_short_name",
  "creation": "2024-10-13 09:35:56.629911",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
   "campus_section",
+  "campus_short_name",
   "campus",
   "village",
   "campus_owners",
@@ -42,15 +43,23 @@
    "fieldtype": "Table",
    "label": "Survey Numbers in Campus",
    "options": "Campus Survey Numbers"
+  },
+  {
+   "fieldname": "campus_short_name",
+   "fieldtype": "Data",
+   "label": "Campus Short Name",
+   "not_nullable": 1,
+   "reqd": 1,
+   "unique": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-10-13 20:53:10.695350",
+ "modified": "2024-10-14 01:18:28.597204",
  "modified_by": "Administrator",
  "module": "VEL Geo Master",
  "name": "Campus",
- "naming_rule": "Expression",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {
