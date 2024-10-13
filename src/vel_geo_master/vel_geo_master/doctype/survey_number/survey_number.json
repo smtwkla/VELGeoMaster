@@ -1,13 +1,13 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:{survey_no} [{village}]",
+ "autoname": "format:{survey_number} [{village}]",
  "creation": "2024-10-13 10:44:28.753954",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
   "section_break_qzli",
-  "survey_no",
+  "survey_number",
   "subdivisioned",
   "village",
   "total_extent_sqm",
@@ -18,13 +18,6 @@
   {
    "fieldname": "section_break_qzli",
    "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "survey_no",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Survey Number",
-   "reqd": 1
   },
   {
    "default": "0",
@@ -57,11 +50,18 @@
    "fieldtype": "Select",
    "label": "Class of Land",
    "options": "Punja\nNanja\nGovt"
+  },
+  {
+   "fieldname": "survey_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Survey Number",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-10-13 20:41:30.433331",
+ "modified": "2024-10-14 01:36:35.446203",
  "modified_by": "Administrator",
  "module": "VEL Geo Master",
  "name": "Survey Number",

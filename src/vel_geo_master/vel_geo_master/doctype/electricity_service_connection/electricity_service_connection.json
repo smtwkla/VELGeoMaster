@@ -30,7 +30,7 @@
   "location_section",
   "door_no",
   "geo_location",
-  "survey_no",
+  "survey_number",
   "village",
   "campus"
  ],
@@ -86,16 +86,11 @@
    "label": "Geo Location"
   },
   {
-   "fieldname": "survey_no",
-   "fieldtype": "Data",
-   "label": "Survey No"
-  },
-  {
    "fieldname": "campus",
-   "fieldtype": "Data",
+   "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Campus",
-   "read_only": 1
+   "options": "Campus"
   },
   {
    "fieldname": "village",
@@ -182,11 +177,16 @@
    "label": "Consumer",
    "options": "Property Owner",
    "reqd": 1
+  },
+  {
+   "fieldname": "survey_number",
+   "fieldtype": "Data",
+   "label": "Survey No"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-10-13 20:26:18.875096",
+ "modified": "2024-10-14 01:32:13.832956",
  "modified_by": "Administrator",
  "module": "VEL Geo Master",
  "name": "Electricity Service Connection",
