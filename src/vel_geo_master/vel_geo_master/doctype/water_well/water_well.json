@@ -1,0 +1,133 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format: {well_number} - {well_name} [{campus}]",
+ "creation": "2024-10-13 18:52:56.287960",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "water_well_basic_details_section",
+  "well_type",
+  "well_name",
+  "well_number",
+  "column_break_guye",
+  "depth",
+  "dimensions",
+  "electrical_service_connection",
+  "section_break_o0hf",
+  "survey_number",
+  "campus",
+  "remarks",
+  "column_break_mkwq",
+  "geolocation",
+  "photo"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_o0hf",
+   "fieldtype": "Section Break",
+   "label": "Location"
+  },
+  {
+   "fieldname": "well_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Well Type",
+   "options": "Bore Well\nOpen Well",
+   "reqd": 1
+  },
+  {
+   "fieldname": "well_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Well Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "well_number",
+   "fieldtype": "Int",
+   "label": "Well Number"
+  },
+  {
+   "fieldname": "geolocation",
+   "fieldtype": "Geolocation",
+   "label": "Geolocation"
+  },
+  {
+   "fieldname": "survey_number",
+   "fieldtype": "Data",
+   "label": "Survey Number"
+  },
+  {
+   "fieldname": "depth",
+   "fieldtype": "Int",
+   "label": "Depth"
+  },
+  {
+   "fieldname": "dimensions",
+   "fieldtype": "Data",
+   "label": "Dimensions"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "campus",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Campus",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_guye",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_mkwq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "water_well_basic_details_section",
+   "fieldtype": "Section Break",
+   "label": "Water Well Basic Details"
+  },
+  {
+   "fieldname": "electrical_service_connection",
+   "fieldtype": "Link",
+   "label": "Electrical Service Connection",
+   "options": "Electricity Service Connection"
+  },
+  {
+   "fieldname": "photo",
+   "fieldtype": "Attach Image",
+   "label": "Photo"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-10-13 20:12:36.491877",
+ "modified_by": "Administrator",
+ "module": "VEL Geo Master",
+ "name": "Water Well",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

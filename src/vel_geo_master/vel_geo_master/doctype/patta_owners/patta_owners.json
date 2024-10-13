@@ -1,0 +1,38 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-10-13 21:04:35.859330",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_nc8d",
+  "patta_owner"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_nc8d",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "patta_owner",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Patta Owner",
+   "options": "Property Owner",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-10-13 21:05:12.803459",
+ "modified_by": "Administrator",
+ "module": "VEL Geo Master",
+ "name": "Patta Owners",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

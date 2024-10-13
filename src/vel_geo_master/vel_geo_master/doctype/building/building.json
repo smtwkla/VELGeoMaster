@@ -1,0 +1,140 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{door_number} | {village} [{campus}]",
+ "creation": "2024-10-13 19:42:11.487093",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_tc4a",
+  "door_number",
+  "property_type",
+  "property_owner",
+  "owner_address",
+  "column_break_pdqw",
+  "block",
+  "ward_number",
+  "street",
+  "village",
+  "location_section",
+  "survey_numbers",
+  "geolocation",
+  "approval_details_section",
+  "building_approval_details",
+  "campus"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_tc4a",
+   "fieldtype": "Section Break",
+   "label": "Building Details"
+  },
+  {
+   "fieldname": "door_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Door Number",
+   "reqd": 1
+  },
+  {
+   "fieldname": "block",
+   "fieldtype": "Data",
+   "label": "Block"
+  },
+  {
+   "fieldname": "ward_number",
+   "fieldtype": "Data",
+   "label": "Ward Number"
+  },
+  {
+   "fieldname": "street",
+   "fieldtype": "Data",
+   "label": "Street"
+  },
+  {
+   "fieldname": "village",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Village",
+   "options": "Village",
+   "reqd": 1
+  },
+  {
+   "fieldname": "geolocation",
+   "fieldtype": "Geolocation",
+   "label": "Geolocation"
+  },
+  {
+   "fieldname": "owner_address",
+   "fieldtype": "Small Text",
+   "label": "Owner Address"
+  },
+  {
+   "fieldname": "property_type",
+   "fieldtype": "Data",
+   "label": "Property Type"
+  },
+  {
+   "fieldname": "column_break_pdqw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "survey_numbers",
+   "fieldtype": "Table",
+   "label": "Survey Numbers",
+   "options": "Building Survey Numbers"
+  },
+  {
+   "fieldname": "location_section",
+   "fieldtype": "Section Break",
+   "label": "Location"
+  },
+  {
+   "fieldname": "approval_details_section",
+   "fieldtype": "Section Break",
+   "label": "Approval Details"
+  },
+  {
+   "fieldname": "building_approval_details",
+   "fieldtype": "Small Text",
+   "label": "Building Approval Details"
+  },
+  {
+   "fieldname": "property_owner",
+   "fieldtype": "Link",
+   "label": "Property Owner",
+   "options": "Property Owner"
+  },
+  {
+   "fieldname": "campus",
+   "fieldtype": "Data",
+   "label": "Campus",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-10-14 00:41:20.054963",
+ "modified_by": "Administrator",
+ "module": "VEL Geo Master",
+ "name": "Building",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

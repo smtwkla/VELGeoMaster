@@ -1,0 +1,47 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-10-13 20:42:20.133824",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_llea",
+  "campus_owner",
+  "ownership_percent"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_llea",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "campus_owner",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Campus Owner",
+   "options": "Property Owner",
+   "reqd": 1
+  },
+  {
+   "default": "100",
+   "fieldname": "ownership_percent",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Ownership Percent",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-10-13 20:43:14.104565",
+ "modified_by": "Administrator",
+ "module": "VEL Geo Master",
+ "name": "Campus Owners",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

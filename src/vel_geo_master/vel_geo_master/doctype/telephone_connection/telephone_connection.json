@@ -1,0 +1,229 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{connection_type} - {telephone_number}",
+ "creation": "2024-10-13 17:38:08.197827",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "basic_details_section",
+  "telephone_number",
+  "connection_type",
+  "column_break_doix",
+  "service_provider",
+  "is_esim",
+  "is_active",
+  "connection_details_section",
+  "tariff_plan",
+  "billing_type",
+  "column_break_ktoo",
+  "date_of_connection",
+  "date_of_surrender",
+  "owner_details_section",
+  "account_number",
+  "connection_owner",
+  "owner_address",
+  "owner_gstin",
+  "column_break_kvff",
+  "remarks",
+  "usage_details_section",
+  "used_by",
+  "column_break_olmf",
+  "used_on_device",
+  "location_section",
+  "geolocation",
+  "column_break_xveo",
+  "door_number",
+  "survey_number",
+  "campus"
+ ],
+ "fields": [
+  {
+   "fieldname": "telephone_number",
+   "fieldtype": "Data",
+   "label": "Telephone Number"
+  },
+  {
+   "fieldname": "account_number",
+   "fieldtype": "Data",
+   "label": "Account Number"
+  },
+  {
+   "fieldname": "service_provider",
+   "fieldtype": "Select",
+   "label": "Service Provider",
+   "options": "BSNL\nAirtel\nJio\nVi"
+  },
+  {
+   "fieldname": "tariff_plan",
+   "fieldtype": "Data",
+   "label": "Tariff Plan"
+  },
+  {
+   "fieldname": "owner_address",
+   "fieldtype": "Small Text",
+   "label": "Owner Address"
+  },
+  {
+   "default": "Mobile",
+   "fieldname": "connection_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Connection Type",
+   "options": "Fixed FTTH\nFixed Copper\nMobile",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "label": "Is Active?"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:doc.connection_type == \"Mobile\"",
+   "fieldname": "is_esim",
+   "fieldtype": "Check",
+   "label": "Is e-Sim?"
+  },
+  {
+   "fieldname": "date_of_surrender",
+   "fieldtype": "Date",
+   "label": "Date of Surrender"
+  },
+  {
+   "fieldname": "date_of_connection",
+   "fieldtype": "Date",
+   "label": "Date of Connection"
+  },
+  {
+   "fieldname": "billing_type",
+   "fieldtype": "Select",
+   "label": "Billing Type",
+   "options": "Prepaid\nPostpaid (Monthly)"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Text",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "survey_number",
+   "fieldtype": "Link",
+   "label": "Survey Number",
+   "options": "Survey Number"
+  },
+  {
+   "depends_on": "eval:doc.connection_type!=\"Mobile\"",
+   "fieldname": "door_number",
+   "fieldtype": "Data",
+   "label": "Door Number"
+  },
+  {
+   "fieldname": "basic_details_section",
+   "fieldtype": "Section Break",
+   "label": "Basic Details"
+  },
+  {
+   "fieldname": "column_break_doix",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "connection_details_section",
+   "fieldtype": "Section Break",
+   "label": "Connection Details"
+  },
+  {
+   "fieldname": "column_break_ktoo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "owner_details_section",
+   "fieldtype": "Section Break",
+   "label": "Owner Details"
+  },
+  {
+   "fieldname": "column_break_kvff",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.connection_type!=\"Mobile\"",
+   "fieldname": "location_section",
+   "fieldtype": "Section Break",
+   "label": "Location"
+  },
+  {
+   "fieldname": "geolocation",
+   "fieldtype": "Geolocation",
+   "label": "Geolocation"
+  },
+  {
+   "fieldname": "column_break_xveo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "campus",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Campus",
+   "options": "Campus",
+   "read_only": 1
+  },
+  {
+   "fieldname": "owner_gstin",
+   "fieldtype": "Data",
+   "label": "Owner GSTIN"
+  },
+  {
+   "fieldname": "used_by",
+   "fieldtype": "Data",
+   "label": "Used By"
+  },
+  {
+   "fieldname": "used_on_device",
+   "fieldtype": "Data",
+   "label": "Used On Device"
+  },
+  {
+   "depends_on": "eval:doc.connection_type==\"Mobile\"",
+   "fieldname": "usage_details_section",
+   "fieldtype": "Section Break",
+   "label": "Usage Details"
+  },
+  {
+   "fieldname": "column_break_olmf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "connection_owner",
+   "fieldtype": "Link",
+   "label": "Connection Owner",
+   "options": "Property Owner"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-10-13 20:27:44.744893",
+ "modified_by": "Administrator",
+ "module": "VEL Geo Master",
+ "name": "Telephone Connection",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

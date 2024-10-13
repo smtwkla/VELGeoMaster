@@ -1,0 +1,51 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-10-13 20:46:09.601692",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_zvhf",
+  "survey_number",
+  "extent_in_campus_sqm",
+  "extent_in_campus"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_zvhf",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "survey_number",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Survey Number",
+   "options": "Survey Number",
+   "reqd": 1
+  },
+  {
+   "fieldname": "extent_in_campus_sqm",
+   "fieldtype": "Int",
+   "label": "Extent in Campus sqm"
+  },
+  {
+   "fieldname": "extent_in_campus",
+   "fieldtype": "Data",
+   "label": "Extent in Campus",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-10-13 20:48:07.217888",
+ "modified_by": "Administrator",
+ "module": "VEL Geo Master",
+ "name": "Campus Survey Numbers",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

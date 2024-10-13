@@ -1,0 +1,87 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{survey_no} [{village}]",
+ "creation": "2024-10-13 10:44:28.753954",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_qzli",
+  "survey_no",
+  "subdivisioned",
+  "village",
+  "total_extent_sqm",
+  "total_extent",
+  "class_of_land"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_qzli",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "survey_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Survey Number",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "subdivisioned",
+   "fieldtype": "Check",
+   "label": "Further Subdivisioned?"
+  },
+  {
+   "fieldname": "village",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Village",
+   "options": "Village",
+   "reqd": 1
+  },
+  {
+   "fieldname": "total_extent",
+   "fieldtype": "Data",
+   "label": "Total Extent",
+   "read_only": 1
+  },
+  {
+   "description": "Area in Square Meters",
+   "fieldname": "total_extent_sqm",
+   "fieldtype": "Int",
+   "label": "Total Extent Sqm"
+  },
+  {
+   "fieldname": "class_of_land",
+   "fieldtype": "Select",
+   "label": "Class of Land",
+   "options": "Punja\nNanja\nGovt"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-10-13 20:41:30.433331",
+ "modified_by": "Administrator",
+ "module": "VEL Geo Master",
+ "name": "Survey Number",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

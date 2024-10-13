@@ -1,0 +1,212 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:SC-{###}",
+ "creation": "2024-10-13 12:52:43.077300",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_ehuk",
+  "sc_number",
+  "consumer",
+  "consumer_address",
+  "consumer_gst",
+  "column_break_nfap",
+  "section_name",
+  "circle",
+  "distribution_zone",
+  "remarks",
+  "connection_type_section",
+  "phase",
+  "contracted_load_kw",
+  "is_solar",
+  "is_welding",
+  "column_break_dico",
+  "tariff",
+  "billing_cycle",
+  "meter_type",
+  "meter_no",
+  "meter_mf",
+  "location_section",
+  "door_no",
+  "geo_location",
+  "survey_no",
+  "village",
+  "campus"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_ehuk",
+   "fieldtype": "Section Break",
+   "label": "Connection"
+  },
+  {
+   "fieldname": "sc_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Service Connection Number",
+   "reqd": 1
+  },
+  {
+   "fieldname": "tariff",
+   "fieldtype": "Data",
+   "label": "Tariff"
+  },
+  {
+   "fieldname": "section_name",
+   "fieldtype": "Data",
+   "label": "Section Name"
+  },
+  {
+   "fieldname": "contracted_load_kw",
+   "fieldtype": "Float",
+   "label": "Contracted Load KW"
+  },
+  {
+   "fieldname": "meter_no",
+   "fieldtype": "Data",
+   "label": "Meter Number"
+  },
+  {
+   "default": "LT",
+   "fieldname": "meter_type",
+   "fieldtype": "Select",
+   "label": "Meter Type",
+   "options": "LT-CT\nLT\nHT-LTCT\nHT-CT",
+   "reqd": 1
+  },
+  {
+   "fieldname": "door_no",
+   "fieldtype": "Data",
+   "label": "Door Number"
+  },
+  {
+   "fieldname": "geo_location",
+   "fieldtype": "Geolocation",
+   "label": "Geo Location"
+  },
+  {
+   "fieldname": "survey_no",
+   "fieldtype": "Data",
+   "label": "Survey No"
+  },
+  {
+   "fieldname": "campus",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Campus",
+   "read_only": 1
+  },
+  {
+   "fieldname": "village",
+   "fieldtype": "Data",
+   "label": "Village",
+   "read_only": 1
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Text",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "consumer_address",
+   "fieldtype": "Small Text",
+   "label": "Consumer Address"
+  },
+  {
+   "fieldname": "consumer_gst",
+   "fieldtype": "Data",
+   "label": "Consumer GST"
+  },
+  {
+   "fieldname": "circle",
+   "fieldtype": "Data",
+   "label": "Circle"
+  },
+  {
+   "fieldname": "distribution_zone",
+   "fieldtype": "Data",
+   "label": "Distribution Zone"
+  },
+  {
+   "fieldname": "phase",
+   "fieldtype": "Select",
+   "label": "Phase",
+   "options": "3 Phase\n1 Phase"
+  },
+  {
+   "fieldname": "meter_mf",
+   "fieldtype": "Float",
+   "label": "Meter Multiplication Factor"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_solar",
+   "fieldtype": "Check",
+   "label": "Solar"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_welding",
+   "fieldtype": "Check",
+   "label": "Welding"
+  },
+  {
+   "default": "Monthly",
+   "fieldname": "billing_cycle",
+   "fieldtype": "Select",
+   "label": "Billing Cycle",
+   "options": "Monthly\nBi-Monthly\nFree"
+  },
+  {
+   "fieldname": "column_break_nfap",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "connection_type_section",
+   "fieldtype": "Section Break",
+   "label": "Connection Type"
+  },
+  {
+   "fieldname": "column_break_dico",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "location_section",
+   "fieldtype": "Section Break",
+   "label": "Location"
+  },
+  {
+   "fieldname": "consumer",
+   "fieldtype": "Link",
+   "label": "Consumer",
+   "options": "Property Owner",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-10-13 20:26:18.875096",
+ "modified_by": "Administrator",
+ "module": "VEL Geo Master",
+ "name": "Electricity Service Connection",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

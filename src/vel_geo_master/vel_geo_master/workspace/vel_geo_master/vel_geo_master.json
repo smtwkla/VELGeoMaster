@@ -1,0 +1,150 @@
+{
+ "app": "frappe",
+ "charts": [],
+ "content": "[{\"id\":\"hRI7pMFAnB\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">VEL Geo Master</span>\",\"col\":12}},{\"id\":\"e_Ey0DPBbf\",\"type\":\"card\",\"data\":{\"card_name\":\"Utility Connections\",\"col\":4}},{\"id\":\"iyDnjC5XsU\",\"type\":\"card\",\"data\":{\"card_name\":\"Land\",\"col\":4}},{\"id\":\"Flno6xUty7\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"2uxOrNrsJ_\",\"type\":\"card\",\"data\":{\"card_name\":\"Masters\",\"col\":4}}]",
+ "creation": "2024-10-14 00:04:25.467668",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "map",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "VEL Geo Master",
+ "link_type": "DocType",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Utility Connections",
+   "link_count": 3,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Electricity Service Connection",
+   "link_count": 0,
+   "link_to": "Electricity Service Connection",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Water Supply Connection",
+   "link_count": 0,
+   "link_to": "Water Supply Connection",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Telephone Connection",
+   "link_count": 0,
+   "link_to": "Telephone Connection",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Land",
+   "link_count": 3,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Survey Number",
+   "link_count": 0,
+   "link_to": "Survey Number",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Land Patta",
+   "link_count": 0,
+   "link_to": "Land Patta",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Campus",
+   "link_count": 0,
+   "link_to": "Campus",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Masters",
+   "link_count": 3,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Village",
+   "link_count": 0,
+   "link_to": "Village",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "District",
+   "link_count": 0,
+   "link_to": "District",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Sub Registrar Office",
+   "link_count": 0,
+   "link_to": "Sub Registrar Office",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2024-10-14 00:11:30.458154",
+ "modified_by": "Administrator",
+ "module": "VEL Geo Master",
+ "name": "VEL Geo Master",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 23.0,
+ "shortcuts": [],
+ "title": "VEL Geo Master",
+ "type": "Workspace"
+}
