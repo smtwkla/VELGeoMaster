@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:{door_number} | {village} [{campus}]",
+ "autoname": "format:{ward_number}/{door_number} | {village} [{campus}]",
  "creation": "2024-10-13 19:42:11.487093",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -114,7 +114,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-10-14 01:21:28.688709",
+ "modified": "2024-10-14 13:26:48.320958",
  "modified_by": "Administrator",
  "module": "VEL Geo Master",
  "name": "Building",

@@ -12,7 +12,8 @@
   "village",
   "campus_owners",
   "survey_numbers",
-  "property_documents"
+  "property_ownership_documents",
+  "support_documents"
  ],
  "fields": [
   {
@@ -54,15 +55,21 @@
    "unique": 1
   },
   {
-   "fieldname": "property_documents",
+   "fieldname": "property_ownership_documents",
    "fieldtype": "Table",
-   "label": "Property Documents",
+   "label": "Property Ownership Documents",
    "options": "Campus Documents"
+  },
+  {
+   "fieldname": "support_documents",
+   "fieldtype": "Table",
+   "label": "Support Documents",
+   "options": "Campus Support Documents"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-10-14 04:13:08.329749",
+ "modified": "2024-10-14 14:13:04.957030",
  "modified_by": "Administrator",
  "module": "VEL Geo Master",
  "name": "Campus",

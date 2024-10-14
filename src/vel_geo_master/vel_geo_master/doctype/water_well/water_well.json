@@ -55,13 +55,14 @@
   },
   {
    "fieldname": "survey_number",
-   "fieldtype": "Data",
-   "label": "Survey Number"
+   "fieldtype": "Link",
+   "label": "Survey Number",
+   "options": "Survey Number"
   },
   {
    "fieldname": "depth",
    "fieldtype": "Int",
-   "label": "Depth"
+   "label": "Depth (m)"
   },
   {
    "fieldname": "dimensions",
@@ -107,7 +108,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-10-14 01:21:54.392401",
+ "modified": "2024-10-14 13:22:45.475484",
  "modified_by": "Administrator",
  "module": "VEL Geo Master",
  "name": "Water Well",

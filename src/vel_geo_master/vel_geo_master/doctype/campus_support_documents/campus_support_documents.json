@@ -1,0 +1,40 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-10-14 14:07:59.361567",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "support_document",
+  "document_type"
+ ],
+ "fields": [
+  {
+   "fieldname": "support_document",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Support Document",
+   "options": "Property Document"
+  },
+  {
+   "fieldname": "document_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Document Type",
+   "options": "Previous Document\nFMB / Topo Sketch\nRevenue Document\nLegal Proceedings\nInternal Notes"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-10-14 14:15:07.835696",
+ "modified_by": "Administrator",
+ "module": "VEL Geo Master",
+ "name": "Campus Support Documents",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}
