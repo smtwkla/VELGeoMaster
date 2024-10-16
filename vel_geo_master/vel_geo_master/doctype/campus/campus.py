@@ -8,5 +8,5 @@ import frappe
 
 class Campus(Document):
 	def before_validate(self):
-		self.taluk = frappe.get_doc('Village', self.village).taluk
-		self.district = frappe.get_doc('Taluk', self.taluk).district
+		self.taluk = frappe.get_cached_doc('Village', self.village).taluk
+		self.district = frappe.get_cached_doc('Taluk', self.taluk).district

@@ -6,9 +6,14 @@ import re
 
 # File where the version is stored
 version_file = r'../VERSION'
+init_file = r'../vel_geo_master/__init__.py'
 
 # Semantic versioning regex pattern (major.minor.patch)
 semver_pattern = r'^v(\d+)\.(\d+)\.(\d+)$'
+
+def run_cmd(cmd):
+    print(">>> " + cmd)
+    os.system(cmd)
 
 def should_increment_minor(commit_message):
     """Checks if 'feat: ' is at the beginning of any line in the commit message."""
@@ -39,20 +44,31 @@ def read_version():
 
     return version
 
-def write_version(new_version):
+def write_version_file(new_version):
     """Writes the new version to the VERSION file."""
     with open(version_file, 'w') as f:
         f.write(new_version + '\n')
 
-def bump_version():
+def write_version_to_init(new_version, init_file):
+    with open(init_file, 'r') as f:
+        lines = f.readlines()
+        new_version_line = f"version = '{new_version}'\n"
+        if lines:
+            lines[0] = new_version_line
+        else:
+            lines.append(new_version_line)
+    with open(init_file, 'w') as f:
+        f.writelines(lines)
 
+def bump_version():
     current_version = read_version()
     new_version = increment_version(current_version, increment_minor=False)
-    write_version(new_version)
+    write_version_file(new_version)
+    write_version_to_init(new_version, init_file)
 
-    cmd = f"git add {version_file}"
-    print(">>> " + cmd)
-    os.system(cmd)
+    run_cmd(f"git add {version_file}")
+    run_cmd(f"git add {init_file}'")
+
     print(f"Version updated to {new_version} in {version_file}")
 
 if __name__ == '__main__':

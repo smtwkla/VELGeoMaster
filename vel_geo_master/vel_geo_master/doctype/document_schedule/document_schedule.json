@@ -1,0 +1,49 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-10-17 00:35:25.811995",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_lvcp",
+  "survey_number",
+  "extent",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_lvcp",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "survey_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Survey Number"
+  },
+  {
+   "fieldname": "extent",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Extent"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-10-17 00:42:46.494292",
+ "modified_by": "Administrator",
+ "module": "VEL Geo Master",
+ "name": "Document Schedule",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

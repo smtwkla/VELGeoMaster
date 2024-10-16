@@ -8,10 +8,15 @@
  "field_order": [
   "section_break_cgdn",
   "document_type",
+  "column_break_ewdt",
   "is_registered",
+  "secbr_reg_details",
   "sro",
+  "column_break_eblw",
   "document_number",
   "document_date",
+  "secbr_doc_contents",
+  "document_schedule",
   "document_gist",
   "document_copy"
  ],
@@ -59,11 +64,36 @@
    "fieldname": "document_copy",
    "fieldtype": "Attach",
    "label": "Document Copy"
+  },
+  {
+   "depends_on": "eval:doc.is_registered",
+   "fieldname": "secbr_reg_details",
+   "fieldtype": "Section Break",
+   "label": "Registration Details"
+  },
+  {
+   "fieldname": "secbr_doc_contents",
+   "fieldtype": "Section Break",
+   "label": "Document Contents"
+  },
+  {
+   "fieldname": "document_schedule",
+   "fieldtype": "Table",
+   "label": "Document Schedule",
+   "options": "Document Schedule"
+  },
+  {
+   "fieldname": "column_break_ewdt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_eblw",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-10-14 04:06:19.164018",
+ "modified": "2024-10-17 01:00:26.755610",
  "modified_by": "Administrator",
  "module": "VEL Geo Master",
  "name": "Property Document",
@@ -81,6 +111,27 @@
    "role": "System Manager",
    "share": 1,
    "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Geo Info Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Geo Info User",
+   "share": 1
   }
  ],
  "sort_field": "creation",

@@ -7,10 +7,5 @@ from frappe import _
 
 
 class ElectricityServiceConnection(Document):
-	def set_title(self):
-		self.title = f'{self.sc_number} [{self.campus}]'
-	def set_campus(self):
-		self.campus = "Campus"
-	def validate(self):
-		self.set_title()
-		self.set_campus()
+	def before_validate(self):
+		self.title = f'{self.sc_name} - {self.sc_number}'
