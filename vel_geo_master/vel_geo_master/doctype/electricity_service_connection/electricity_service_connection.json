@@ -1,13 +1,14 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:SC-{###}",
+ "autoname": "format:SC-{###} {sc_name}",
  "creation": "2024-10-13 12:52:43.077300",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
   "section_break_ehuk",
   "sc_number",
+  "sc_name",
   "consumer",
   "consumer_address",
   "consumer_gst",
@@ -182,11 +183,18 @@
    "fieldname": "survey_number",
    "fieldtype": "Data",
    "label": "Survey No"
+  },
+  {
+   "description": "Descriptive Name for Connection",
+   "fieldname": "sc_name",
+   "fieldtype": "Data",
+   "label": "Connection Name",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-10-14 01:32:13.832956",
+ "modified": "2024-10-16 12:38:34.312755",
  "modified_by": "Administrator",
  "module": "VEL Geo Master",
  "name": "Electricity Service Connection",

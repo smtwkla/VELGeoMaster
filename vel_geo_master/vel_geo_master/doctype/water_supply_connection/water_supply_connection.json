@@ -15,7 +15,8 @@
   "section_break_kwml",
   "geolocation",
   "campus",
-  "survey_number"
+  "survey_number",
+  "remarks"
  ],
  "fields": [
   {
@@ -73,11 +74,16 @@
    "fieldtype": "Link",
    "label": "Survey Number",
    "options": "Survey Number"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-10-14 01:31:22.876811",
+ "modified": "2024-10-16 12:40:05.296011",
  "modified_by": "Administrator",
  "module": "VEL Geo Master",
  "name": "Water Supply Connection",
