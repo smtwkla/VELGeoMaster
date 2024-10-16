@@ -3,7 +3,10 @@
 
 # import frappe
 from frappe.model.document import Document
+import frappe
 
 
 class Campus(Document):
-	pass
+	def before_validate(self):
+		self.taluk = frappe.get_doc('Village', self.village).taluk
+		self.district = frappe.get_doc('Taluk', self.taluk).district

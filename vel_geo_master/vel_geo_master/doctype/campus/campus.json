@@ -9,11 +9,18 @@
   "campus_section",
   "campus_short_name",
   "campus",
+  "column_break_pnds",
   "village",
+  "district",
+  "taluk",
+  "campus_details_section",
   "campus_owners",
   "survey_numbers",
+  "documents_section",
   "property_ownership_documents",
-  "support_documents"
+  "support_documents",
+  "notes_and_remarks_section",
+  "notes"
  ],
  "fields": [
   {
@@ -65,11 +72,47 @@
    "fieldtype": "Table",
    "label": "Support Documents",
    "options": "Campus Support Documents"
+  },
+  {
+   "fieldname": "column_break_pnds",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "campus_details_section",
+   "fieldtype": "Section Break",
+   "label": "Campus Details"
+  },
+  {
+   "fieldname": "documents_section",
+   "fieldtype": "Section Break",
+   "label": "Documents"
+  },
+  {
+   "fieldname": "district",
+   "fieldtype": "Data",
+   "label": "District",
+   "read_only": 1
+  },
+  {
+   "fieldname": "taluk",
+   "fieldtype": "Data",
+   "label": "Taluk",
+   "read_only": 1
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Text",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "notes_and_remarks_section",
+   "fieldtype": "Section Break",
+   "label": "Notes and Remarks"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-10-14 14:13:04.957030",
+ "modified": "2024-10-16 13:32:22.681383",
  "modified_by": "Administrator",
  "module": "VEL Geo Master",
  "name": "Campus",
