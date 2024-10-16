@@ -1,57 +1,43 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "field:village",
- "creation": "2024-10-13 10:13:33.905017",
+ "autoname": "field:taluk",
+ "creation": "2024-10-16 08:40:06.645780",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "section_break_wcdn",
-  "village",
-  "pincode",
+  "section_break_p0v5",
   "taluk",
   "district"
  ],
  "fields": [
   {
-   "fieldname": "section_break_wcdn",
-   "fieldtype": "Section Break",
-   "label": "Village Details"
+   "fieldname": "section_break_p0v5",
+   "fieldtype": "Section Break"
   },
   {
-   "fieldname": "village",
+   "fieldname": "taluk",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Village",
+   "label": "Taluk",
    "reqd": 1,
    "unique": 1
   },
   {
-   "fieldname": "pincode",
-   "fieldtype": "Data",
-   "label": "Pincode"
-  },
-  {
    "fieldname": "district",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "District",
    "options": "District",
-   "read_only": 1
-  },
-  {
-   "fieldname": "taluk",
-   "fieldtype": "Link",
-   "label": "Taluk",
-   "options": "Taluk",
    "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-10-16 12:20:53.365847",
+ "modified": "2024-10-16 09:09:58.658569",
  "modified_by": "Administrator",
  "module": "VEL Geo Master",
- "name": "Village",
+ "name": "Taluk",
  "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
@@ -70,6 +56,5 @@
  ],
  "sort_field": "creation",
  "sort_order": "DESC",
- "states": [],
- "title_field": "village"
+ "states": []
 }

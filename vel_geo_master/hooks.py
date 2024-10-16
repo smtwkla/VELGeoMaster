@@ -23,6 +23,7 @@ app_license = "mit"
 
 # Includes in <head>
 # ------------------
+app_include_js = "/assets/vel_geo_master/js/map_defaults.js"
 
 # include js, css files in header of desk.html
 # app_include_css = "/assets/vel_geo_master/css/vel_geo_master.css"
