@@ -101,7 +101,7 @@
   },
   {
    "fieldname": "notes",
-   "fieldtype": "Text",
+   "fieldtype": "Text Editor",
    "label": "Notes"
   },
   {
@@ -112,7 +112,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-10-16 13:32:22.681383",
+ "modified": "2024-10-16 18:37:00.167459",
  "modified_by": "Administrator",
  "module": "VEL Geo Master",
  "name": "Campus",

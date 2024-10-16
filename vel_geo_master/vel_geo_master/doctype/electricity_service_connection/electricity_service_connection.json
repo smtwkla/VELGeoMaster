@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:SC-{###} {sc_name}",
+ "autoname": "format: {sc_name} - {sc_number}",
  "creation": "2024-10-13 12:52:43.077300",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -194,7 +194,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-10-16 12:38:34.312755",
+ "modified": "2024-10-16 17:41:33.490382",
  "modified_by": "Administrator",
  "module": "VEL Geo Master",
  "name": "Electricity Service Connection",
