@@ -9,7 +9,7 @@ version_file = r'../VERSION'
 init_file = r'../vel_geo_master/__init__.py'
 
 # Semantic versioning regex pattern (major.minor.patch)
-semver_pattern = r'^v(\d+)\.(\d+)\.(\d+)$'
+semver_pattern = r'^(\d+)\.(\d+)\.(\d+)$'
 
 def run_cmd(cmd):
     print(">>> " + cmd)
@@ -26,10 +26,10 @@ def increment_version(version, increment_minor=False):
         major, minor, patch = match.groups()
         if increment_minor:
             # Increment the minor version and reset the patch version
-            new_version = f"v{major}.{int(minor) + 1}.0"
+            new_version = f"{major}.{int(minor) + 1}.0"
         else:
             # Increment the patch version
-            new_version = f"v{major}.{minor}.{int(patch) + 1}"
+            new_version = f"{major}.{minor}.{int(patch) + 1}"
         return new_version
     else:
         raise ValueError(f"Invalid semantic version: {version}")
@@ -52,7 +52,7 @@ def write_version_file(new_version):
 def write_version_to_init(new_version, init_file):
     with open(init_file, 'r') as f:
         lines = f.readlines()
-        new_version_line = f"version = '{new_version}'\n"
+        new_version_line = f'__version__ = "{new_version}"\n'
         if lines:
             lines[0] = new_version_line
         else:
@@ -67,7 +67,7 @@ def bump_version():
     write_version_to_init(new_version, init_file)
 
     run_cmd(f"git add {version_file}")
-    run_cmd(f"git add {init_file}'")
+    run_cmd(f"git add {init_file}")
 
     print(f"Version updated to {new_version} in {version_file}")
 
