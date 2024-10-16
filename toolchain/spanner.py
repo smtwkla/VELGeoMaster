@@ -2,9 +2,10 @@ import click
 import os
 import subprocess
 import secrets
+import bump_version as bv
 
 
-def read_version_file(version_file="../VERSION"):
+def read_version_file(version_file=r"../VERSION"):
 	"""Reads the current version from the VERSION file."""
 	if not os.path.exists(version_file):
 		raise FileNotFoundError(f"{version_file} file not found.")
@@ -19,10 +20,13 @@ def read_version_file(version_file="../VERSION"):
 def cli():
 	pass
 
+@cli.command()
+def bump_version():
+	bv.bump_version()
 
 @cli.command()
 def get_version():
-	click.echo(read_version_file())
+	click.echo(bv.read_version())
 
 @click.command()
 @click.argument('target')
@@ -37,7 +41,7 @@ def build(target):
 	elif target == "app":
 		click.echo("build vel_geo_master container image for prod")
 		ver = read_version_file()
-		os.system(f"docker build -t {secrets.APP_IMAGE_NAME}:{ver} --file=build/Dockerfile-app "
+		os.system(f"docker build --no-cache -t {secrets.APP_IMAGE_NAME}:{ver} --file=build/Dockerfile-app "
 		          f'--build-arg REPO_URI="{secrets.REPO_URI}" '
 		          "build")
 
@@ -49,13 +53,18 @@ def push(target):
 		click.echo("Not implemented.")
 	elif target == "app":
 		ver = read_version_file()
-		app_image_uri = secrets.APP_IMAGE_URI + ":" + ver
-		click.echo(f'Pushing to {app_image_uri}...')
-		cmd = f"docker image tag {secrets.APP_IMAGE_NAME}:{ver} {app_image_uri}"
-		click.echo(cmd)
+		image_name = secrets.APP_IMAGE_NAME
+		app_image_uri = secrets.APP_IMAGE_URI
+		app_image_uri_with_ver = app_image_uri + ":" + ver
+		click.echo(f'Pushing to {app_image_uri_with_ver}...')
+		cmd = f"docker image tag {image_name}:{ver} {app_image_uri}:{ver}"
+		click.echo(">>> " + cmd)
 		os.system(cmd)
-		cmd = f"docker image push {app_image_uri}"
-		click.echo(cmd)
+		cmd = f"docker image tag {app_image_uri_with_ver} {app_image_uri}:latest"
+		click.echo(">>> " + cmd)
+		os.system(cmd)
+		cmd = f"docker image push {app_image_uri_with_ver}"
+		click.echo(">>> " + cmd)
 		os.system(cmd)
 
 @click.command()
@@ -104,5 +113,7 @@ cli.add_command(stop)
 cli.add_command(bash)
 cli.add_command(push)
 cli.add_command(get_version)
+cli.add_command(bump_version)
+
 if __name__ == '__main__':
 	cli()
