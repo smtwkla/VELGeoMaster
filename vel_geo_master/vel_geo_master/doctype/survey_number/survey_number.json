@@ -8,11 +8,15 @@
  "field_order": [
   "section_break_qzli",
   "survey_number",
-  "subdivisioned",
   "village",
   "total_extent_sqm",
+  "column_break_xcej",
+  "class_of_land",
+  "subdivisioned",
+  "extent_alternate_units_section",
   "total_extent",
-  "class_of_land"
+  "column_break_wafu",
+  "total_extent_acre"
  ],
  "fields": [
   {
@@ -36,7 +40,7 @@
   {
    "fieldname": "total_extent",
    "fieldtype": "Data",
-   "label": "Total Extent",
+   "label": "Total Extent (Ha-a)",
    "read_only": 1
   },
   {
@@ -49,7 +53,7 @@
    "fieldname": "class_of_land",
    "fieldtype": "Select",
    "label": "Class of Land",
-   "options": "Punja\nNanja\nGovt"
+   "options": "Punja\nNanja\nTown Survey\nGovt"
   },
   {
    "fieldname": "survey_number",
@@ -57,11 +61,30 @@
    "in_list_view": 1,
    "label": "Survey Number",
    "reqd": 1
+  },
+  {
+   "fieldname": "total_extent_acre",
+   "fieldtype": "Float",
+   "label": "Total Extent (Acre)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_xcej",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "extent_alternate_units_section",
+   "fieldtype": "Section Break",
+   "label": "Extent (Alternate Units)"
+  },
+  {
+   "fieldname": "column_break_wafu",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-10-14 01:36:35.446203",
+ "modified": "2024-10-16 18:54:00.947337",
  "modified_by": "Administrator",
  "module": "VEL Geo Master",
  "name": "Survey Number",
