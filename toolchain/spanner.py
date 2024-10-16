@@ -5,15 +5,15 @@ import secrets
 import bump_version as bv
 
 
-def read_version_file(version_file=r"../VERSION"):
-	"""Reads the current version from the VERSION file."""
-	if not os.path.exists(version_file):
-		raise FileNotFoundError(f"{version_file} file not found.")
+def run_cmd(cmd):
+	print(">>> " + cmd)
+	os.system(cmd)
 
-	with open(version_file, 'r') as f:
-		version = f.read().strip()
 
-	return version
+def commit_and_push():
+	ver = bv.read_version()
+	run_cmd(f'git commit -m "bumped to version {ver}"')
+	run_cmd(f'git push origin master')
 
 
 def	build_target(target):
@@ -26,7 +26,7 @@ def	build_target(target):
 		os.system("docker build -t frappe_base:latest --file=build/Dockerfile build")
 	elif target == "app":
 		click.echo("build vel_geo_master container image for prod")
-		ver = read_version_file()
+		ver = bv.read_version()
 		os.system(
 			f"docker build --no-cache -t {secrets.APP_IMAGE_NAME}:v{ver} --file=build/Dockerfile-app "
 			f'--build-arg REPO_URI="{secrets.REPO_URI}" '
@@ -40,20 +40,14 @@ def	push_target(target):
 	if target == "base":
 		click.echo("Not implemented.")
 	elif target == "app":
-		ver = read_version_file()
+		ver = bv.read_version()
 		image_name = secrets.APP_IMAGE_NAME
 		app_image_uri = secrets.APP_IMAGE_URI
 		app_image_uri_with_ver = app_image_uri + ":v" + ver
 		click.echo(f'Pushing to {app_image_uri_with_ver}...')
-		cmd = f"docker image tag {image_name}:v{ver} {app_image_uri}:{ver}"
-		click.echo(">>> " + cmd)
-		os.system(cmd)
-		cmd = f"docker image tag {app_image_uri_with_ver} {app_image_uri}:latest"
-		click.echo(">>> " + cmd)
-		os.system(cmd)
-		cmd = f"docker image push {app_image_uri_with_ver}"
-		click.echo(">>> " + cmd)
-		os.system(cmd)
+		run_cmd(f"docker image tag {image_name}:v{ver} {app_image_uri}:v{ver}")
+		run_cmd(f"docker image tag {app_image_uri_with_ver} {app_image_uri}:latest")
+		run_cmd(f"docker image push {app_image_uri_with_ver}")
 
 
 @click.group
@@ -86,6 +80,7 @@ def push(target):
 @click.command()
 def release_app():
 	bv.bump_version()
+	commit_and_push()
 	build_target("app")
 	push_target("app")
 
