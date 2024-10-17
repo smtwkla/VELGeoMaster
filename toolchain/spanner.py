@@ -13,7 +13,7 @@ def run_cmd(cmd):
 def commit_and_push():
 	ver = bv.read_version()
 	run_cmd(f'git commit -m "bumped to version {ver}"')
-	run_cmd(f'git push origin master')
+	run_cmd(f'git push origin main')
 
 
 def	build_target(target):
