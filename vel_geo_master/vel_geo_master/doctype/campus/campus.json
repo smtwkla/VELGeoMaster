@@ -20,7 +20,8 @@
   "property_ownership_documents",
   "support_documents",
   "notes_and_remarks_section",
-  "notes"
+  "campus_notes",
+  "remarks"
  ],
  "fields": [
   {
@@ -100,19 +101,25 @@
    "read_only": 1
   },
   {
-   "fieldname": "notes",
-   "fieldtype": "Text Editor",
-   "label": "Notes"
-  },
-  {
    "fieldname": "notes_and_remarks_section",
    "fieldtype": "Section Break",
    "label": "Notes and Remarks"
+  },
+  {
+   "fieldname": "campus_notes",
+   "fieldtype": "Table",
+   "label": "Campus Notes",
+   "options": "Campus Notes List"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Text Editor",
+   "label": "Remarks"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-10-17 00:55:11.520289",
+ "modified": "2024-10-17 19:22:29.261183",
  "modified_by": "Administrator",
  "module": "VEL Geo Master",
  "name": "Campus",
