@@ -1,0 +1,173 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:case_name",
+ "creation": "2024-10-17 19:28:34.038219",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_oib9",
+  "case_name",
+  "court_name",
+  "case_type",
+  "filing_date",
+  "column_break_pexx",
+  "cnr",
+  "traditional_case_number",
+  "status",
+  "next_hearing",
+  "advocate",
+  "parties_section",
+  "our_side",
+  "plaintiff",
+  "column_break_cgnf",
+  "defendant",
+  "property_section",
+  "schedule",
+  "section_break_zcrh",
+  "case_notes",
+  "outcome"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_oib9",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "case_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Case Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "cnr",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Case Number Record"
+  },
+  {
+   "fieldname": "case_type",
+   "fieldtype": "Data",
+   "label": "Case Type"
+  },
+  {
+   "fieldname": "court_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Court Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "filing_date",
+   "fieldtype": "Date",
+   "label": "Filing Date"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Case Status",
+   "options": "Pending\nAdmitted\nIn Progress\nAdjourned\nReserved for Judgment\nJudgment Passed\nDisposed of\nOn Appeal\nStayed\nTransferred\nDismissed\nWithdrawn\nSettled\nReopened"
+  },
+  {
+   "fieldname": "plaintiff",
+   "fieldtype": "Small Text",
+   "label": "Plaintiff",
+   "reqd": 1
+  },
+  {
+   "fieldname": "defendant",
+   "fieldtype": "Small Text",
+   "label": "Defendant",
+   "reqd": 1
+  },
+  {
+   "fieldname": "advocate",
+   "fieldtype": "Data",
+   "label": "Advocate"
+  },
+  {
+   "fieldname": "schedule",
+   "fieldtype": "Table",
+   "label": "Schedule of Properties",
+   "options": "Document Schedule"
+  },
+  {
+   "fieldname": "case_notes",
+   "fieldtype": "Text Editor",
+   "label": "Case Notes"
+  },
+  {
+   "fieldname": "outcome",
+   "fieldtype": "Small Text",
+   "label": "Outcome"
+  },
+  {
+   "fieldname": "our_side",
+   "fieldtype": "Select",
+   "label": "Our Side",
+   "options": "Plaintiff\nDefendant",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_pexx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "parties_section",
+   "fieldtype": "Section Break",
+   "label": "Parties"
+  },
+  {
+   "fieldname": "column_break_cgnf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "property_section",
+   "fieldtype": "Section Break",
+   "label": "Property"
+  },
+  {
+   "fieldname": "section_break_zcrh",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "next_hearing",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Next Hearing Date"
+  },
+  {
+   "fieldname": "traditional_case_number",
+   "fieldtype": "Data",
+   "label": "Traditional Case Number"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-10-17 20:49:26.159597",
+ "modified_by": "Administrator",
+ "module": "VEL Geo Master",
+ "name": "Litigation",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "case_name"
+}

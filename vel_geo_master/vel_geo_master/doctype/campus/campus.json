@@ -19,6 +19,8 @@
   "documents_section",
   "property_ownership_documents",
   "support_documents",
+  "litigations_section",
+  "table_roty",
   "notes_and_remarks_section",
   "campus_notes",
   "remarks"
@@ -115,11 +117,21 @@
    "fieldname": "remarks",
    "fieldtype": "Text Editor",
    "label": "Remarks"
+  },
+  {
+   "fieldname": "litigations_section",
+   "fieldtype": "Section Break",
+   "label": "Litigations"
+  },
+  {
+   "fieldname": "table_roty",
+   "fieldtype": "Table",
+   "options": "Campus Litigations"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-10-17 19:22:29.261183",
+ "modified": "2024-10-17 20:37:42.791230",
  "modified_by": "Administrator",
  "module": "VEL Geo Master",
  "name": "Campus",
