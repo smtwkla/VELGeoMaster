@@ -1,0 +1,184 @@
+{
+ "actions": [],
+ "autoname": "format:PTY-PMT-{####}",
+ "creation": "2024-10-18 07:33:44.451205",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_hz1h",
+  "property_type",
+  "property",
+  "payment_type",
+  "column_break_poxg",
+  "payment_for_period",
+  "due_date",
+  "status",
+  "additional_properties_section",
+  "properties",
+  "payment_details_section",
+  "date_of_payment",
+  "payment_mode",
+  "receipt_details",
+  "column_break_vfow",
+  "paid_by",
+  "accounted_in",
+  "notes_section",
+  "remarks",
+  "title"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_hz1h",
+   "fieldtype": "Section Break",
+   "label": "Property Payment For"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Pending\nPaid\nClosed"
+  },
+  {
+   "fieldname": "property_type",
+   "fieldtype": "Link",
+   "label": "Property Type",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "property",
+   "fieldtype": "Dynamic Link",
+   "label": "Property",
+   "options": "property_type"
+  },
+  {
+   "fieldname": "due_date",
+   "fieldtype": "Date",
+   "label": "Due Date"
+  },
+  {
+   "fieldname": "date_of_payment",
+   "fieldtype": "Date",
+   "label": "Date of Payment"
+  },
+  {
+   "fieldname": "paid_by",
+   "fieldtype": "Link",
+   "label": "Paid By",
+   "options": "Property Owner"
+  },
+  {
+   "fieldname": "payment_mode",
+   "fieldtype": "Select",
+   "label": "Payment Mode",
+   "options": "Cash\nBank EFT\nCheque"
+  },
+  {
+   "fieldname": "accounted_in",
+   "fieldtype": "Data",
+   "label": "Accounted In"
+  },
+  {
+   "fieldname": "receipt_details",
+   "fieldtype": "Data",
+   "label": "Receipt Details"
+  },
+  {
+   "fieldname": "payment_for_period",
+   "fieldtype": "Data",
+   "label": "Payment for Period"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "column_break_poxg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "payment_details_section",
+   "fieldtype": "Section Break",
+   "label": "Payment Details"
+  },
+  {
+   "fieldname": "column_break_vfow",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "notes_section",
+   "fieldtype": "Section Break",
+   "label": "Notes"
+  },
+  {
+   "description": "Ex: Water Tax, Electricity Bill, Building Property Tax",
+   "fieldname": "payment_type",
+   "fieldtype": "Data",
+   "label": "Payment Type"
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Title",
+   "read_only": 1
+  },
+  {
+   "fieldname": "properties",
+   "fieldtype": "Table",
+   "label": "Properties",
+   "options": "Property Payment Properties"
+  },
+  {
+   "fieldname": "additional_properties_section",
+   "fieldtype": "Section Break",
+   "label": "Additional Properties"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-10-18 15:05:20.501801",
+ "modified_by": "Administrator",
+ "module": "VEL Geo Master",
+ "name": "Property Payment",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Geo Info User",
+   "share": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Geo Info Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "title"
+}

@@ -28,8 +28,10 @@
   "remarks",
   "usage_details_section",
   "used_by",
+  "used_by_dept",
   "column_break_olmf",
   "used_on_device",
+  "taken_home",
   "location_section",
   "geolocation",
   "column_break_xveo",
@@ -198,11 +200,22 @@
    "fieldtype": "Link",
    "label": "Survey Number",
    "options": "Survey Number"
+  },
+  {
+   "fieldname": "used_by_dept",
+   "fieldtype": "Data",
+   "label": "Used By Dept"
+  },
+  {
+   "default": "0",
+   "fieldname": "taken_home",
+   "fieldtype": "Check",
+   "label": "Device Taken Home?"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-10-17 00:57:46.712887",
+ "modified": "2024-10-18 05:09:50.473471",
  "modified_by": "Administrator",
  "module": "VEL Geo Master",
  "name": "Telephone Connection",
