@@ -1,0 +1,33 @@
+name: Send Email on Push to Main
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  send_email:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Get commit message
+        id: get_commit_msg
+        run: |
+          echo "commit_message=$(git log -1 --pretty=%B)" >> $GITHUB_ENV
+
+      - name: Send email
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.office365.com
+          server_port: 587
+          username: ${{ secrets.EMAIL_USERNAME }}
+          password: ${{ secrets.EMAIL_PASSWORD }}
+          subject: 'New commit pushed to main branch of VELGeoMaster'
+          body: |
+            A new commit was pushed to the main branch.
+            Commit message: ${{ env.commit_message }}
+          to: ${{ vars.RELEASE_NOTE_RECIPIENTS }}
+          from: erp-notifications@smtw.in
+
