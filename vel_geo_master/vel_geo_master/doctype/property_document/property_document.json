@@ -57,7 +57,7 @@
   },
   {
    "fieldname": "document_gist",
-   "fieldtype": "Text",
+   "fieldtype": "Text Editor",
    "label": "Document Gist"
   },
   {
@@ -93,7 +93,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-10-17 01:00:26.755610",
+ "modified": "2024-10-19 10:22:03.539444",
  "modified_by": "Administrator",
  "module": "VEL Geo Master",
  "name": "Property Document",

@@ -1,7 +1,7 @@
 {
  "app": "frappe",
  "charts": [],
- "content": "[{\"id\":\"hRI7pMFAnB\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">VEL Geo Master</span>\",\"col\":12}},{\"id\":\"e_Ey0DPBbf\",\"type\":\"card\",\"data\":{\"card_name\":\"Utility Connections\",\"col\":4}},{\"id\":\"iyDnjC5XsU\",\"type\":\"card\",\"data\":{\"card_name\":\"Land\",\"col\":4}},{\"id\":\"0rgKAVSdHv\",\"type\":\"card\",\"data\":{\"card_name\":\"Infrastructure\",\"col\":4}},{\"id\":\"Flno6xUty7\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"2uxOrNrsJ_\",\"type\":\"card\",\"data\":{\"card_name\":\"Revenue Masters\",\"col\":4}},{\"id\":\"JrYeep35Cl\",\"type\":\"card\",\"data\":{\"card_name\":\"Masters\",\"col\":4}},{\"id\":\"-p9dfRS9lP\",\"type\":\"card\",\"data\":{\"card_name\":\"Litigations\",\"col\":4}}]",
+ "content": "[{\"id\":\"hRI7pMFAnB\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">VEL Geo Master</span>\",\"col\":12}},{\"id\":\"e_Ey0DPBbf\",\"type\":\"card\",\"data\":{\"card_name\":\"Utility Connections\",\"col\":4}},{\"id\":\"iyDnjC5XsU\",\"type\":\"card\",\"data\":{\"card_name\":\"Land\",\"col\":4}},{\"id\":\"0rgKAVSdHv\",\"type\":\"card\",\"data\":{\"card_name\":\"Infrastructure\",\"col\":4}},{\"id\":\"Flno6xUty7\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"DZ970zpToj\",\"type\":\"card\",\"data\":{\"card_name\":\"Property Tax/Utility Payments\",\"col\":4}},{\"id\":\"-p9dfRS9lP\",\"type\":\"card\",\"data\":{\"card_name\":\"Litigations\",\"col\":4}},{\"id\":\"2uxOrNrsJ_\",\"type\":\"card\",\"data\":{\"card_name\":\"Revenue Masters\",\"col\":4}},{\"id\":\"JrYeep35Cl\",\"type\":\"card\",\"data\":{\"card_name\":\"Masters\",\"col\":4}}]",
  "creation": "2024-10-14 00:04:25.467668",
  "custom_blocks": [],
  "docstatus": 0,
@@ -154,11 +154,69 @@
   {
    "hidden": 0,
    "is_query_report": 0,
+   "label": "Litigations",
+   "link_count": 1,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Litigation (Court Case)",
+   "link_count": 0,
+   "link_to": "Litigation",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Property Tax/Utility Payments",
+   "link_count": 1,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Property Payment",
+   "link_count": 0,
+   "link_to": "Property Payment",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
    "label": "Land",
    "link_count": 5,
    "link_type": "DocType",
    "onboard": 0,
    "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Campus",
+   "link_count": 0,
+   "link_to": "Campus",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Campus Note",
+   "link_count": 0,
+   "link_to": "Campus Note",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
   },
   {
    "hidden": 0,
@@ -183,54 +241,15 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Campus",
-   "link_count": 0,
-   "link_to": "Campus",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
    "label": "Property Document",
    "link_count": 0,
    "link_to": "Property Document",
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Campus Note",
-   "link_count": 0,
-   "link_to": "Campus Note",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Litigations",
-   "link_count": 1,
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Card Break"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Litigation (Court Case)",
-   "link_count": 0,
-   "link_to": "Litigation",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
   }
  ],
- "modified": "2024-10-17 20:39:15.731449",
+ "modified": "2024-10-20 11:00:01.716198",
  "modified_by": "Administrator",
  "module": "VEL Geo Master",
  "name": "VEL Geo Master",

@@ -114,6 +114,13 @@ def run(d, f):
 			  f'{" --force-recreate" if f else ""}'
 			  )
 
+@click.command()
+def bash():
+	os.system("docker compose exec bench bash")
+
+@click.command()
+def bench_start():
+	os.system('docker compose exec bench bash -c "cd /home/frappe/frappe-bench; bench start"')
 
 @click.command()
 @click.option('-v', is_flag=True, help="Remove container volumes.")
@@ -134,8 +141,10 @@ cli.add_command(build)
 cli.add_command(configurator)
 cli.add_command(create_site)
 cli.add_command(run)
+cli.add_command(bash)
 cli.add_command(stop)
 cli.add_command(bash)
+cli.add_command(bench_start)
 cli.add_command(push)
 cli.add_command(get_ver)
 cli.add_command(bump_ver)

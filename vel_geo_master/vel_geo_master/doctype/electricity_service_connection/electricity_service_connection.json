@@ -12,6 +12,7 @@
   "consumer",
   "consumer_address",
   "consumer_gst",
+  "linked_mobile",
   "column_break_nfap",
   "section_name",
   "circle",
@@ -190,11 +191,16 @@
    "fieldtype": "Data",
    "label": "Connection Name",
    "reqd": 1
+  },
+  {
+   "fieldname": "linked_mobile",
+   "fieldtype": "Data",
+   "label": "Linked Mobile Number"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-10-17 00:57:25.910975",
+ "modified": "2024-10-20 09:13:37.609664",
  "modified_by": "Administrator",
  "module": "VEL Geo Master",
  "name": "Electricity Service Connection",
