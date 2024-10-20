@@ -15,7 +15,8 @@ jobs:
       - name: Get commit message
         id: get_commit_msg
         run: |
-          echo "commit_message=$(git log -1 --pretty=%B)" >> $GITHUB_ENV
+          git log ${{ github.event.before }}..${{ github.sha }} --pretty=format:"%s" > commit_messages.txt
+          echo "commit_message=$(cat commit_messages.txt)" >> $GITHUB_ENV
 
       - name: Send email
         uses: dawidd6/action-send-mail@v3

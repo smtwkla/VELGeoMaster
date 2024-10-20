@@ -1,0 +1,96 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "hash",
+ "creation": "2024-10-20 18:18:52.448624",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_mb2i",
+  "collateral_name",
+  "is_active",
+  "bank",
+  "loan_details",
+  "survey_numbers",
+  "documents_surrendered",
+  "mod_details",
+  "closure_details"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_mb2i",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "collateral_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Collateral Name"
+  },
+  {
+   "fieldname": "bank",
+   "fieldtype": "Data",
+   "label": "Bank"
+  },
+  {
+   "fieldname": "loan_details",
+   "fieldtype": "Small Text",
+   "label": "Loan Details"
+  },
+  {
+   "fieldname": "survey_numbers",
+   "fieldtype": "Table",
+   "label": "Survey Numbers as Collateral",
+   "options": "Survey Numbers as Collateral"
+  },
+  {
+   "fieldname": "documents_surrendered",
+   "fieldtype": "Table",
+   "label": "Documents Surrendered",
+   "options": "Documents Surrendered For Collateral"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Is Active?"
+  },
+  {
+   "fieldname": "mod_details",
+   "fieldtype": "Small Text",
+   "label": "MOD Details"
+  },
+  {
+   "fieldname": "closure_details",
+   "fieldtype": "Small Text",
+   "label": "Closure Details"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-10-20 18:54:53.628387",
+ "modified_by": "Administrator",
+ "module": "VEL Geo Master",
+ "name": "Collateral Security",
+ "naming_rule": "Random",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "collateral_name"
+}

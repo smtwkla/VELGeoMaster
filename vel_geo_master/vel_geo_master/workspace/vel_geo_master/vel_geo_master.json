@@ -1,7 +1,7 @@
 {
  "app": "frappe",
  "charts": [],
- "content": "[{\"id\":\"hRI7pMFAnB\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">VEL Geo Master</span>\",\"col\":12}},{\"id\":\"e_Ey0DPBbf\",\"type\":\"card\",\"data\":{\"card_name\":\"Utility Connections\",\"col\":4}},{\"id\":\"iyDnjC5XsU\",\"type\":\"card\",\"data\":{\"card_name\":\"Land\",\"col\":4}},{\"id\":\"0rgKAVSdHv\",\"type\":\"card\",\"data\":{\"card_name\":\"Infrastructure\",\"col\":4}},{\"id\":\"Flno6xUty7\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"DZ970zpToj\",\"type\":\"card\",\"data\":{\"card_name\":\"Property Tax/Utility Payments\",\"col\":4}},{\"id\":\"-p9dfRS9lP\",\"type\":\"card\",\"data\":{\"card_name\":\"Litigations\",\"col\":4}},{\"id\":\"2uxOrNrsJ_\",\"type\":\"card\",\"data\":{\"card_name\":\"Revenue Masters\",\"col\":4}},{\"id\":\"JrYeep35Cl\",\"type\":\"card\",\"data\":{\"card_name\":\"Masters\",\"col\":4}}]",
+ "content": "[{\"id\":\"hRI7pMFAnB\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">VEL Geo Master</span>\",\"col\":12}},{\"id\":\"e_Ey0DPBbf\",\"type\":\"card\",\"data\":{\"card_name\":\"Utility Connections\",\"col\":4}},{\"id\":\"iyDnjC5XsU\",\"type\":\"card\",\"data\":{\"card_name\":\"Land\",\"col\":4}},{\"id\":\"0rgKAVSdHv\",\"type\":\"card\",\"data\":{\"card_name\":\"Infrastructure\",\"col\":4}},{\"id\":\"Flno6xUty7\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"DZ970zpToj\",\"type\":\"card\",\"data\":{\"card_name\":\"Property Tax/Utility Payments\",\"col\":4}},{\"id\":\"ofU-10vsNh\",\"type\":\"card\",\"data\":{\"card_name\":\"Others\",\"col\":4}},{\"id\":\"2uxOrNrsJ_\",\"type\":\"card\",\"data\":{\"card_name\":\"Revenue Masters\",\"col\":4}},{\"id\":\"JrYeep35Cl\",\"type\":\"card\",\"data\":{\"card_name\":\"Masters\",\"col\":4}}]",
  "creation": "2024-10-14 00:04:25.467668",
  "custom_blocks": [],
  "docstatus": 0,
@@ -154,25 +154,6 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Litigations",
-   "link_count": 1,
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Card Break"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Litigation (Court Case)",
-   "link_count": 0,
-   "link_to": "Litigation",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
    "label": "Property Tax/Utility Payments",
    "link_count": 1,
    "link_type": "DocType",
@@ -247,9 +228,38 @@
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Others",
+   "link_count": 2,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Collateral Security",
+   "link_count": 0,
+   "link_to": "Collateral Security",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Litigation",
+   "link_count": 0,
+   "link_to": "Litigation",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
   }
  ],
- "modified": "2024-10-20 11:00:01.716198",
+ "modified": "2024-10-20 18:34:13.198188",
  "modified_by": "Administrator",
  "module": "VEL Geo Master",
  "name": "VEL Geo Master",
