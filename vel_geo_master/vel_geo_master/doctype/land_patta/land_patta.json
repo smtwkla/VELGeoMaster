@@ -14,7 +14,8 @@
   "section_break_jdzc",
   "patta_owners",
   "section_break_xoey",
-  "survey_numbers"
+  "survey_numbers",
+  "remarks"
  ],
  "fields": [
   {
@@ -65,11 +66,16 @@
   {
    "fieldname": "section_break_xoey",
    "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-10-17 01:00:03.389322",
+ "modified": "2024-10-20 11:35:54.970893",
  "modified_by": "Administrator",
  "module": "VEL Geo Master",
  "name": "Land Patta",
