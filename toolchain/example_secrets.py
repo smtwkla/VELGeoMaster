@@ -1,0 +1,10 @@
+APP = "vel_geo_master"
+APP_IMAGE_NAME = APP
+
+REPO_USER = "asdf"
+REPO_TOKEN = "g_"
+REPO_SERVER = "github.com"
+REPO_NAME = "VELGeoMaster"
+REPO_URI = f"https://{REPO_TOKEN}@{REPO_SERVER}/{REPO_USER}/{REPO_NAME}.git"
+CONTAINER_REPO_SERVER = "ghcr.io"
+APP_IMAGE_URI = f"{CONTAINER_REPO_SERVER}/{REPO_USER}/{APP}"

@@ -4,6 +4,8 @@ import subprocess
 import secrets
 import bump_version as bv
 
+APP = secrets.APP
+
 
 def run_cmd(cmd):
 	print(">>> " + cmd)
@@ -19,13 +21,13 @@ def commit_and_push():
 def	build_target(target):
 	if target == "dev":
 		click.echo("build bench container image for dev")
-		os.system("docker build -t vel_geo_master_dev .")
+		os.system(f"docker build -t {APP}_dev -f dev_Dockerfile.")
 		os.system("docker image ls")
 	elif target == "base":
 		click.echo("build frappe_base container image for prod")
 		os.system("docker build -t frappe_base:latest --file=build/Dockerfile build")
 	elif target == "app":
-		click.echo("build vel_geo_master container image for prod")
+		click.echo(f"build {APP} container image for prod")
 		ver = bv.read_version()
 		os.system(
 			f"docker build --no-cache -t {secrets.APP_IMAGE_NAME}:v{ver} --file=build/Dockerfile-app "
@@ -100,7 +102,7 @@ def configurator(f):
 def create_site(f):
 	click.echo("run create_site on dev compose stack")
 	os.system(
-		"docker compose --profile=init_bench up db redis-cache redis-queue backend create-site"
+		"docker compose -f dev_compose.yaml --profile=init_bench up db redis-cache redis-queue backend create-site"
 		f'{" --force-recreate" if f else ""}'
 		)
 
@@ -110,29 +112,29 @@ def create_site(f):
 @click.option('-f', is_flag=True, help="Force recreation.")
 def run(d, f):
 	click.echo("run dev compose stack")
-	os.system(f"docker compose up {'-d' if d else ''}"
+	os.system(f"docker compose -f dev_compose.yaml up {'-d' if d else ''}"
 			  f'{" --force-recreate" if f else ""}'
 			  )
 
 @click.command()
 def bash():
-	os.system("docker compose exec bench bash")
+	os.system("docker compose -f dev_compose.yaml exec bench bash")
 
 @click.command()
 def bench_start():
-	os.system('docker compose exec bench bash -c "cd /home/frappe/frappe-bench; bench start"')
+	os.system('docker compose -f dev_compose.yaml exec bench bash -c "cd /home/frappe/frappe-bench; bench start"')
 
 @click.command()
 @click.option('-v', is_flag=True, help="Remove container volumes.")
 def stop(v):
 	click.echo("stop dev compose stack")
-	os.system(f"docker compose down {'-v' if v else ''}")
+	os.system(f"docker compose -f dev_compose.yaml down {'-v' if v else ''}")
 
 
 @click.command()
 def bash():
 	click.echo("bash into bench container")
-	os.system("docker compose exec bench bash")
+	os.system("docker compose -f dev_compose.yaml exec bench bash")
 
 
 #REM docker run --rm -it --name customer_erp_dev -p 8000:8000 customer_erp_dev

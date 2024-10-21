@@ -1,10 +1,6 @@
 x-image-name: &image_name
   image: frappe/bench:latest
 
-x-volume-apps: &app_path
-  volumes:
-    - ../src:/home/frappe/frappe-bench/apps/vel_geo_master
-
 
 services:
 
@@ -58,7 +54,7 @@ services:
       - SHELL=/bin/bash
     volumes:
       - ..:/workspace:cached
-    working_dir: /workspace/src
+    working_dir: /workspace
     ports:
       - 8000-8005:8000-8005
       - 9000-9005:9000-9005
