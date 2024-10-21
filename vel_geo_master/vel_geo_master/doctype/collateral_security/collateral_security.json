@@ -10,6 +10,7 @@
   "collateral_name",
   "is_active",
   "bank",
+  "bank_branch",
   "loan_details",
   "survey_numbers",
   "documents_surrendered",
@@ -30,7 +31,7 @@
   {
    "fieldname": "bank",
    "fieldtype": "Data",
-   "label": "Bank"
+   "label": "Bank Name"
   },
   {
    "fieldname": "loan_details",
@@ -65,11 +66,16 @@
    "fieldname": "closure_details",
    "fieldtype": "Small Text",
    "label": "Closure Details"
+  },
+  {
+   "fieldname": "bank_branch",
+   "fieldtype": "Data",
+   "label": "Bank Branch"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-10-20 18:54:53.628387",
+ "modified": "2024-10-21 23:31:28.459032",
  "modified_by": "Administrator",
  "module": "VEL Geo Master",
  "name": "Collateral Security",

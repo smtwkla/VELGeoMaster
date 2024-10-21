@@ -21,7 +21,7 @@ def commit_and_push():
 def	build_target(target):
 	if target == "dev":
 		click.echo("build bench container image for dev")
-		os.system(f"docker build -t {APP}_dev -f dev_Dockerfile.")
+		os.system(f"docker build -t {APP}_dev -f dev_Dockerfile .")
 		os.system("docker image ls")
 	elif target == "base":
 		click.echo("build frappe_base container image for prod")
@@ -86,27 +86,6 @@ def release_app():
 	build_target("app")
 	push_target("app")
 
-
-@click.command()
-@click.option('-f', is_flag=True, help="Force recreation.")
-def configurator(f):
-	click.echo("run configurator on dev compose stack")
-	os.system(
-		"docker compose --profile=init_bench up db redis-cache redis-queue backend configurator"
-		f'{" --force-recreate" if f else ""}'
-		)
-
-
-@click.command()
-@click.option('-f', is_flag=True, help="Force recreation.")
-def create_site(f):
-	click.echo("run create_site on dev compose stack")
-	os.system(
-		"docker compose -f dev_compose.yaml --profile=init_bench up db redis-cache redis-queue backend create-site"
-		f'{" --force-recreate" if f else ""}'
-		)
-
-
 @click.command()
 @click.option('-d', is_flag=True, help="Run in daemon mode.")
 @click.option('-f', is_flag=True, help="Force recreation.")
@@ -119,6 +98,10 @@ def run(d, f):
 @click.command()
 def bash():
 	os.system("docker compose -f dev_compose.yaml exec bench bash")
+
+@click.command()
+def bench_build_dev():
+	os.system('docker compose -f dev_compose.yaml exec bench bash -c "/workspace/toolchain/dev_install.sh"')
 
 @click.command()
 def bench_start():
@@ -140,12 +123,11 @@ def bash():
 #REM docker run --rm -it --name customer_erp_dev -p 8000:8000 customer_erp_dev
 
 cli.add_command(build)
-cli.add_command(configurator)
-cli.add_command(create_site)
 cli.add_command(run)
 cli.add_command(bash)
 cli.add_command(stop)
 cli.add_command(bash)
+cli.add_command(bench_build_dev)
 cli.add_command(bench_start)
 cli.add_command(push)
 cli.add_command(get_ver)
