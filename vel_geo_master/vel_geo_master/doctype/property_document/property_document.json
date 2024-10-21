@@ -30,7 +30,7 @@
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Document Type",
-   "options": "Sale Deed\nSettlement\nRent Agreement\nRelease Deed",
+   "options": "Sale Deed\nSettlement\nRent Agreement\nRelease Deed\nPower Of Attorney",
    "reqd": 1
   },
   {
@@ -93,7 +93,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-10-19 10:22:03.539444",
+ "modified": "2024-10-21 23:15:00.809945",
  "modified_by": "Administrator",
  "module": "VEL Geo Master",
  "name": "Property Document",
