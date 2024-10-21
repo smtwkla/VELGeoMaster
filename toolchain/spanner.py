@@ -18,14 +18,14 @@ def commit_and_push():
 	run_cmd(f'git push origin main')
 
 
-def	build_target(target):
+def	build_target(target, n=None):
 	if target == "dev":
 		click.echo("build bench container image for dev")
 		os.system(f"docker build -t {APP}_dev -f dev_Dockerfile .")
 		os.system("docker image ls")
 	elif target == "base":
 		click.echo("build frappe_base container image for prod")
-		os.system("docker build -t frappe_base:latest --file=build/Dockerfile build")
+		os.system(f"docker build -t frappe_base:latest --file=build/Dockerfile-base {'--no-cache' if n else ''} build")
 	elif target == "app":
 		click.echo(f"build {APP} container image for prod")
 		ver = bv.read_version()
@@ -69,8 +69,9 @@ def get_ver():
 
 @click.command()
 @click.argument('target')
-def build(target):
-	build_target(target)
+@click.option('-n', is_flag=True, help="No Cache.")
+def build(target, n):
+	build_target(target, n)
 
 
 @click.command()
@@ -119,8 +120,6 @@ def bash():
 	click.echo("bash into bench container")
 	os.system("docker compose -f dev_compose.yaml exec bench bash")
 
-
-#REM docker run --rm -it --name customer_erp_dev -p 8000:8000 customer_erp_dev
 
 cli.add_command(build)
 cli.add_command(run)
