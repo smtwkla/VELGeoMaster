@@ -93,7 +93,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-10-21 23:15:00.809945",
+ "modified": "2024-10-22 06:35:59.040533",
  "modified_by": "Administrator",
  "module": "VEL Geo Master",
  "name": "Property Document",
@@ -114,7 +114,6 @@
   },
   {
    "create": 1,
-   "delete": 1,
    "email": 1,
    "export": 1,
    "print": 1,
@@ -132,6 +131,18 @@
    "report": 1,
    "role": "Geo Info User",
    "share": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Geo Info Admin",
+   "share": 1,
+   "write": 1
   }
  ],
  "sort_field": "creation",

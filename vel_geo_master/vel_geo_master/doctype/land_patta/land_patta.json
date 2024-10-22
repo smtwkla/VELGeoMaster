@@ -75,7 +75,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-10-20 11:35:54.970893",
+ "modified": "2024-10-22 06:36:07.856070",
  "modified_by": "Administrator",
  "module": "VEL Geo Master",
  "name": "Land Patta",
@@ -96,7 +96,6 @@
   },
   {
    "create": 1,
-   "delete": 1,
    "email": 1,
    "export": 1,
    "print": 1,
@@ -114,6 +113,18 @@
    "report": 1,
    "role": "Geo Info User",
    "share": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Geo Info Admin",
+   "share": 1,
+   "write": 1
   }
  ],
  "sort_field": "creation",

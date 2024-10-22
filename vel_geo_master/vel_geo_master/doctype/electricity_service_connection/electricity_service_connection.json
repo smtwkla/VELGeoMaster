@@ -200,7 +200,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-10-20 09:13:37.609664",
+ "modified": "2024-10-22 06:37:11.477553",
  "modified_by": "Administrator",
  "module": "VEL Geo Master",
  "name": "Electricity Service Connection",
@@ -221,7 +221,6 @@
   },
   {
    "create": 1,
-   "delete": 1,
    "email": 1,
    "export": 1,
    "print": 1,
@@ -239,6 +238,18 @@
    "report": 1,
    "role": "Geo Info User",
    "share": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Geo Info Admin",
+   "share": 1,
+   "write": 1
   }
  ],
  "sort_field": "creation",
