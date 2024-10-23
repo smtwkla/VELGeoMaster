@@ -92,33 +92,33 @@ def release_app():
 @click.option('-f', is_flag=True, help="Force recreation.")
 def run(d, f):
 	click.echo("run dev compose stack")
-	os.system(f"docker compose -f dev_compose.yaml up {'-d' if d else ''}"
+	os.system(f"docker compose -f dev_compose.yaml -p dev_{APP} up {'-d' if d else ''}"
 			  f'{" --force-recreate" if f else ""}'
 			  )
 
 @click.command()
 def bash():
-	os.system("docker compose -f dev_compose.yaml exec bench bash")
+	os.system(f"docker compose -f dev_compose.yaml -p dev_{APP} exec bench bash")
 
 @click.command()
 def bench_build_dev():
-	os.system('docker compose -f dev_compose.yaml exec bench bash -c "/workspace/toolchain/dev_install.sh"')
+	os.system(f'docker compose -f dev_compose.yaml -p dev_{APP} exec bench bash -c "/workspace/toolchain/dev_install.sh"')
 
 @click.command()
 def bench_start():
-	os.system('docker compose -f dev_compose.yaml exec bench bash -c "cd /home/frappe/frappe-bench; bench start"')
+	os.system(f'docker compose -f dev_compose.yaml -p dev_{APP} exec bench bash -c "cd /home/frappe/frappe-bench; bench start"')
 
 @click.command()
 @click.option('-v', is_flag=True, help="Remove container volumes.")
 def stop(v):
 	click.echo("stop dev compose stack")
-	os.system(f"docker compose -f dev_compose.yaml down {'-v' if v else ''}")
+	os.system(f"docker compose -f dev_compose.yaml -p dev_{APP} down {'-v' if v else ''}")
 
 
 @click.command()
 def bash():
 	click.echo("bash into bench container")
-	os.system("docker compose -f dev_compose.yaml exec bench bash")
+	os.system(f"docker compose -f dev_compose.yaml -p dev_{APP} exec bench bash")
 
 
 cli.add_command(build)
@@ -135,3 +135,4 @@ cli.add_command(release_app)
 
 if __name__ == '__main__':
 	cli()
+
