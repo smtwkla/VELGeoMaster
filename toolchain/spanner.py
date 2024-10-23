@@ -51,6 +51,20 @@ def	push_target(target):
 		run_cmd(f"docker image tag {app_image_uri_with_ver} {app_image_uri}:latest")
 		run_cmd(f"docker image push {app_image_uri_with_ver}")
 
+def check_if_repo_dirty():
+	result = subprocess.run(
+		["git", "status", "--porcelain"],
+		stdout=subprocess.PIPE,
+		stderr=subprocess.PIPE
+	)
+	if result.returncode != 0:
+		click.echo("Error checking Git repository status.")
+		exit(1)
+	if result.stdout:
+		click.echo("There are uncommitted changes in the repository:")
+		click.echo(result.stdout.decode("utf-8"))
+		exit(1)
+
 
 @click.group
 def cli():
@@ -82,6 +96,7 @@ def push(target):
 
 @click.command()
 def release_app():
+	check_if_repo_dirty()
 	bv.bump_version()
 	commit_and_push()
 	build_target("app")

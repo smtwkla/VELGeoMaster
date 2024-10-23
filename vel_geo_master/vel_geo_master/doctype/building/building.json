@@ -23,6 +23,7 @@
   "campus",
   "approval_details_section",
   "building_approval_details",
+  "taxation_number",
   "description"
  ],
  "fields": [
@@ -125,11 +126,17 @@
    "fieldname": "description",
    "fieldtype": "Small Text",
    "label": "Building Description"
+  },
+  {
+   "description": "\u0bb5\u0bb0\u0bbf \u0bb5\u0bbf\u0ba4\u0bbf\u0baa\u0bcd\u0baa\u0bc1 \u0b8e\u0ba3\u0bcd",
+   "fieldname": "taxation_number",
+   "fieldtype": "Data",
+   "label": "Taxation Number"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-10-22 06:36:31.532954",
+ "modified": "2024-10-23 23:12:00.948734",
  "modified_by": "Administrator",
  "module": "VEL Geo Master",
  "name": "Building",
