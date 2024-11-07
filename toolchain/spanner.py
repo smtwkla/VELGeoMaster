@@ -19,6 +19,7 @@ def commit_and_push():
 
 
 def	build_target(target, n=None):
+	""" builds dev image, base image or app. -n for No cache. Usage build {dev | base | app } [-n] """
 	if target == "dev":
 		click.echo("build bench container image for dev")
 		os.system(f"docker build -t {APP}_dev -f dev_Dockerfile .")
