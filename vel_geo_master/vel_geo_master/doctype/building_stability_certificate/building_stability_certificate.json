@@ -1,0 +1,135 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:certificate_name",
+ "creation": "2024-11-07 06:59:01.595373",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_h7yq",
+  "certificate_name",
+  "valid_from",
+  "valid_till",
+  "buildings_section",
+  "buildings",
+  "engineer_details_section",
+  "engineer",
+  "er_address",
+  "er_contact_ph",
+  "er_email",
+  "er_license",
+  "additional_details_section",
+  "certificate_copy",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_h7yq",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "certificate_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Certificate Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "valid_from",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Valid From",
+   "reqd": 1
+  },
+  {
+   "fieldname": "valid_till",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Valid Till",
+   "reqd": 1
+  },
+  {
+   "fieldname": "engineer_details_section",
+   "fieldtype": "Section Break",
+   "label": "Engineer Details"
+  },
+  {
+   "fieldname": "engineer",
+   "fieldtype": "Data",
+   "label": "Certifying Engineer"
+  },
+  {
+   "fieldname": "er_address",
+   "fieldtype": "Small Text",
+   "label": "Engineer Address"
+  },
+  {
+   "fieldname": "er_license",
+   "fieldtype": "Data",
+   "label": "Engineer License Details"
+  },
+  {
+   "fieldname": "buildings_section",
+   "fieldtype": "Section Break",
+   "label": "Buildings"
+  },
+  {
+   "fieldname": "buildings",
+   "fieldtype": "Table",
+   "label": "Buildings",
+   "options": "Building Stability Cert Buildings"
+  },
+  {
+   "fieldname": "er_contact_ph",
+   "fieldtype": "Data",
+   "label": "Contact Phone"
+  },
+  {
+   "fieldname": "er_email",
+   "fieldtype": "Data",
+   "label": "Contact Email"
+  },
+  {
+   "fieldname": "additional_details_section",
+   "fieldtype": "Section Break",
+   "label": "Additional Details"
+  },
+  {
+   "fieldname": "certificate_copy",
+   "fieldtype": "Attach",
+   "label": "Certificate Copy"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Data",
+   "label": "Remarks"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-11-07 07:24:04.525242",
+ "modified_by": "Administrator",
+ "module": "VEL Geo Master",
+ "name": "Building Stability Certificate",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "certificate_name"
+}
