@@ -14,7 +14,7 @@ bench set-config -g redis_queue redis://redis-queue:6379
 bench set-config -g redis_socketio redis://redis-queue:6379
 git config --global --add safe.directory '*'
 bench config set-common-config -c root_password '"admin"'
-bench new-site --no-mariadb-socket --admin-password admin ${APP}_dev
+bench new-site --no-mariadb-socket --admin-password admin --db-password ${APP} ${APP}_dev
 bench --site ${APP}_dev set-config developer_mode 1
 bench --site ${APP}_dev clear-cache
 bench use ${APP}_dev

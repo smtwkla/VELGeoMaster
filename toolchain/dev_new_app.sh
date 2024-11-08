@@ -8,5 +8,5 @@ fi
 cd /home/frappe/frappe-bench
 bench new-app $APP
 mv apps/${APP} /workspace
-ln -s /workspace apps/${APP}
+ln -s /workspace/${APP} apps/${APP}
 bench --site ${APP}_dev install-app ${APP}
