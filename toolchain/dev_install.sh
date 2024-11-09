@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-APP=$(head -n 1 /workspace/toolchain/secrets.py | cut -d '=' -f2 | sed 's/^"//; s/"$//')
+APP=$(head -n 1 /workspace/toolchain/secrets.py | cut -d '=' -f2 | sed 's/^[[:space:]"'\'']*//; s/"$//')
 export APP
 
 if [ -z "$APP" ]; then

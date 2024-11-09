@@ -54,6 +54,7 @@ services:
       - SHELL=/bin/bash
     volumes:
       - ..:/workspace:cached
+      - frappe:/home/frappe
     working_dir: /workspace
     ports:
       - 8000-8005:8000-8005
@@ -64,10 +65,8 @@ services:
 volumes:
   redis-queue-data:
   redis-cache-data:
-  sites:
-  logs:
-  assets:
   db-data:
+  frappe:
 
 networks:
   erp-network:
