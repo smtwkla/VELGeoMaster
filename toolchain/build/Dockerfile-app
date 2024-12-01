@@ -1,9 +1,11 @@
 FROM frappe_base:latest
 
+ARG APP
 ARG REPO_URI
 
 WORKDIR /home/frappe/frappe-bench
-RUN bench get-app vel_geo_master ${REPO_URI}
+RUN pip3 install awscli
+RUN bench get-app ${APP} ${REPO_URI}
 
 ENV PATH="/home/frappe/.local/bin:$PATH"
 CMD [ \

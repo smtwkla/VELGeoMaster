@@ -20,6 +20,8 @@ services:
       - --skip-innodb-read-only-compressed # Temporary fix for MariaDB 10.6
     environment:
       MYSQL_ROOT_PASSWORD: admin
+    ports:
+      - 3306:3306
     volumes:
       - db-data:/var/lib/mysql
     networks:
@@ -57,8 +59,8 @@ services:
       - frappe:/home/frappe
     working_dir: /workspace
     ports:
-      - 8000-8005:8000-8005
-      - 9000-9005:9000-9005
+      - 8100-8105:8000-8005
+      - 9100-9105:9000-9005
     networks:
       - erp-network
 

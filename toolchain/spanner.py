@@ -5,6 +5,7 @@ import secrets
 import bump_version as bv
 
 APP = secrets.APP
+bv.set_app(APP)
 
 
 def run_cmd(cmd):
@@ -33,6 +34,7 @@ def	build_target(target, n=None):
 		os.system(
 			f"docker build --no-cache -t {secrets.APP_IMAGE_NAME}:v{ver} --file=build/Dockerfile-app "
 			f'--build-arg REPO_URI="{secrets.REPO_URI}" '
+			f'--build-arg APP="{secrets.APP}" '
 			"build")
 
 
@@ -117,7 +119,8 @@ def bash():
 	os.system(f"docker compose -f dev_compose.yaml -p dev_{APP} exec bench bash")
 
 @click.command()
-def bench_build_dev():
+def bench_build():
+	"""init bench. bench-build, init_bench, new_app, get_app"""
 	os.system(f'docker compose -f dev_compose.yaml -p dev_{APP} exec bench bash -c "/workspace/toolchain/dev_install.sh"')
 
 @click.command()
@@ -142,7 +145,7 @@ cli.add_command(run)
 cli.add_command(bash)
 cli.add_command(stop)
 cli.add_command(bash)
-cli.add_command(bench_build_dev)
+cli.add_command(bench_build)
 cli.add_command(bench_start)
 cli.add_command(push)
 cli.add_command(get_ver)

@@ -3,13 +3,17 @@
 import os
 import re
 
+version_file = init_file = semver_pattern = None
 
-# File where the version is stored
-version_file = r'../VERSION'
-init_file = r'../vel_geo_master/__init__.py'
 
-# Semantic versioning regex pattern (major.minor.patch)
-semver_pattern = r'^(\d+)\.(\d+)\.(\d+)$'
+def set_app(app):
+    global version_file, init_file, semver_pattern
+    # File where the version is stored
+    version_file = r'../VERSION'
+    init_file = rf'../{app}/__init__.py'
+
+    # Semantic versioning regex pattern (major.minor.patch)
+    semver_pattern = r'^(\d+)\.(\d+)\.(\d+)$'
 
 def run_cmd(cmd):
     print(">>> " + cmd)
