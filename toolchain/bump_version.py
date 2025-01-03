@@ -38,20 +38,25 @@ def increment_version(version, increment_minor=False):
     else:
         raise ValueError(f"Invalid semantic version: {version}")
 
-def read_version():
+def read_version_file():
     """Reads the current version from the VERSION file."""
     if not os.path.exists(version_file):
         raise FileNotFoundError(f"{version_file} file not found.")
 
     with open(version_file, 'r') as f:
         version = f.read().strip()
+        rest = []
+        for line in f:
+            rest.append(line)
 
-    return version
+    return version, rest
 
-def write_version_file(new_version):
+def write_version_file(new_version, rest):
     """Writes the new version to the VERSION file."""
     with open(version_file, 'w') as f:
         f.write(new_version + '\n')
+        for line in rest:
+            f.write(line)
 
 def write_version_to_init(new_version, init_file):
     with open(init_file, 'r') as f:
@@ -65,9 +70,9 @@ def write_version_to_init(new_version, init_file):
         f.writelines(lines)
 
 def bump_version():
-    current_version = read_version()
+    current_version, rest_of_file = read_version_file()
     new_version = increment_version(current_version, increment_minor=False)
-    write_version_file(new_version)
+    write_version_file(new_version, rest_of_file)
     write_version_to_init(new_version, init_file)
 
     run_cmd(f"git add {version_file}")
